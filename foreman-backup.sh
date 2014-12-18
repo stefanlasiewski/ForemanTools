@@ -3,6 +3,8 @@
 # Backup The Foreman, following the advice at 
 # http://theforeman.org/manuals/1.7/index.html#5.5.1Backup
 
+# Currently a very simple script.
+
 # stefanl@nersc.gov
 
 # Temporary: Be verbose
@@ -32,7 +34,7 @@ main () {
 	tar --selinux -czf $BACKUPDIR/var_lib_puppet_dir.tar.gz /var/lib/puppet/ssl
 	tar --selinux -czf $BACKUPDIR/tftpboot-dhcp.tar.gz /var/lib/tftpboot /etc/dhcp/ /var/lib/dhcpd/
 	
-	ls -lh *tar.gz
+	ls -lh *tar.gz foreman.dump
 
 }
 
